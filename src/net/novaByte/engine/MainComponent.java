@@ -1,5 +1,7 @@
 package net.novaByte.engine;
 
+import org.lwjgl.opengl.Display;
+
 
 public class MainComponent 
 {
@@ -65,7 +67,7 @@ public class MainComponent
 				
 				unprocessedTime -= frameTime;
 				
-				if(Window.isCloseRequested())
+				if( Window.isCloseRequested() )
 					stop();
 				
 				Time.setDelta(frameTime);
@@ -97,7 +99,7 @@ public class MainComponent
 				}
 			}
 			
-//			Display.sync(60);
+			Display.sync(60);
 			
 		}
 		

@@ -33,11 +33,15 @@ public class Mesh
 		glBindBuffer(GL_ARRAY_BUFFER, vbo);
 		glVertexAttribPointer(0, 3, GL_FLOAT, false, Vertex.SIZE * 4, 0);	// 4 represents the size of a BYTE
 		
+//		glEnable(GL_LINE_SMOOTH);
+//		glHint(GL_LINE_SMOOTH_HINT, GL_DONT_CARE);
+//		glLineWidth(1.5f);
+		
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
 	// Param1 : The type of thing you want to draw. 
 	// Param2 : The number of vertices. 
 	// Param3 : The type of the vertices. Param4 : The offset to start at
-		glDrawElements(GL_TRIANGLES, size, GL_UNSIGNED_INT, 0);	
+		glDrawElements(GL_LINES, size, GL_UNSIGNED_INT, 0);	
 		
 		glDisableVertexAttribArray(0);
 	}
